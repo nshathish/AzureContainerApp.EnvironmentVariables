@@ -1,0 +1,69 @@
+## .NET build artifacts
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code workspace settings
+.vscode/
+
+## Build results
+*.dll
+*.exe
+*.app
+*.log
+
+## NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+artifacts/
+
+## ASP.NET Core publish
+publish/
+out/
+wwwroot/
+
+## Environment config
+.env
+*.env.local
+*.env.development
+*.env.production
+
+## Docker
+docker-compose.override.yml
+**/Dockerfile.*.temp
+**/docker-compose*.yml.orig
+**/*.db
+
+## Node modules (if using front-end bits)
+node_modules/
+
+## Logs
+*.log
+
+## OS-specific
+Thumbs.db
+.DS_Store
+
+## Visual Studio settings
+.vs/
+
+## Rider settings
+.idea/
+*.sln.iml
+
+## Temporary files
+*.tmp
+*.bak
+*.swp
+
+## appsettings
+appsettings.Development.json
+appsettings.json
