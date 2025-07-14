@@ -29,7 +29,7 @@ name: Build and deploy a container to an Azure Web App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
