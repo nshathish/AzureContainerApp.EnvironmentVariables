@@ -12,7 +12,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["AzureContainerApp.EnvironmentVariables/AzureContainerApp.EnvironmentVariables.csproj", "AzureContainerApp.EnvironmentVariables/"]
+COPY ["AzureContainerApp.EnvironmentVariables.csproj", "."]
+
 RUN dotnet restore "./AzureContainerApp.EnvironmentVariables/AzureContainerApp.EnvironmentVariables.csproj"
 COPY . .
 WORKDIR "/src/AzureContainerApp.EnvironmentVariables"
