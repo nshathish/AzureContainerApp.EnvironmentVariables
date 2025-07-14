@@ -1,4 +1,4 @@
-@AzureContainerApp.EnvironmentVariables_HostAddress = https://localhost:32771
+@AzureContainerApp.EnvironmentVariables_HostAddress = https://localhost:32773
 
 GET {{AzureContainerApp.EnvironmentVariables_HostAddress}}/weatherforecast/
 Accept: application/json
