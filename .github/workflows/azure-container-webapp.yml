@@ -60,4 +60,4 @@ jobs:
             --environment ${{ vars.CONTAINER_APP_ENVIRONMENT }} \
             --image ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest \
             --ingress external \
-            --target-port 80
+            --target-port 8080
