@@ -53,12 +53,16 @@ jobs:
           docker push ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest
 
       - name: Deploy to Azure Container App
-        run: |
-          az containerapp up \
-            --name ${{ vars.CONTAINER_APP_NAME }} \
-            --resource-group ${{ vars.RESOURCE_GROUP }} \
-            --environment ${{ vars.CONTAINER_APP_ENVIRONMENT }} \
-            --image ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest \
-            --ingress external \
-            --target-port 8080 \
-            --env-vars ShipTheoryApiUrl=${{ vars.ShipTheoryApiUrl }}
+        uses: azure/container-apps-deploy@v1
+        with:
+            appSourcePath: .
+            imageToDeploy: ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest
+            registryUrl: ${{ vars.ACR_LOGIN_SERVER }}
+            resourceGroup: ${{ vars.RESOURCE_GROUP }}
+            containerAppName: ${{ vars.CONTAINER_APP_NAME }}
+            containerAppEnvironment: ${{ vars.CONTAINER_APP_ENVIRONMENT }}
+            ingress: external
+            targetPort: 8080
+            environmentVariables: |
+              ShipTheoryApiUrl=${{ vars.ShipTheoryApiUrl }}
+    
