@@ -61,3 +61,4 @@ jobs:
             --image ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest \
             --ingress external \
             --target-port 8080
+            --env-vars ShipTheoryApiUrl=${{ vars.ShipTheoryApiUrl }}
