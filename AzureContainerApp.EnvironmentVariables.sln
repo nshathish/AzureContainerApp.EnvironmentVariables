@@ -10,6 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{BCE8AF5B-B73C-4812-B4C5-91FFC891CBE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{ED5C2556-8F24-4378-84C1-222D1CAD9D57}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\azure-container-webapp.yml = .github\workflows\azure-container-webapp.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +30,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCE8AF5B-B73C-4812-B4C5-91FFC891CBE6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{ED5C2556-8F24-4378-84C1-222D1CAD9D57} = {BCE8AF5B-B73C-4812-B4C5-91FFC891CBE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {699B8AC7-DC51-41C8-9065-0CB3A0A70295}

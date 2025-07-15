@@ -57,6 +57,7 @@ jobs:
           az containerapp up \
             --name ${{ vars.CONTAINER_APP_NAME }} \
             --resource-group ${{ vars.RESOURCE_GROUP }} \
+            --environment ${{ vars.CONTAINER_APP_ENVIRONMENT }} \
             --image ${{ vars.ACR_LOGIN_SERVER }}/${{ vars.IMAGE_NAME }}:latest \
             --ingress external \
             --target-port 80
