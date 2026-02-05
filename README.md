@@ -29,6 +29,10 @@ This Terraform project automates the creation of a production-ready environment 
 #### 6. Integration Outputs
 *   The **Outputs** section doesn't just show data; it formats the exact values needed for your GitHub Actions. It provides the Registry URL and App names in a format that you can copy-paste directly into your GitHub repository variables.
 
+#### 7. How to run it now:
+* When you run terraform, pass your Client ID:
+`terraform apply -var="existing_sp_client_id=00000000-0000-0000-0000-000000000000"`
+
 ### Summary of Workflow
 1.  **Terraform** builds the "empty" house (ACR, Environment, and Security).
 2.  **Terraform** gives your existing **Service Principal** the "keys" to that house.
