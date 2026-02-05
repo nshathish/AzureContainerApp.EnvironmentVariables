@@ -31,6 +31,7 @@ This Terraform project automates the creation of a production-ready environment 
 
 #### 7. How to run it now:
 * When you run terraform, pass your Client ID:
+  
 `terraform apply -var="existing_sp_client_id=00000000-0000-0000-0000-000000000000"`
 
 ### Summary of Workflow
