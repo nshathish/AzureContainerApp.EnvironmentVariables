@@ -61,7 +61,7 @@ jobs:
           containerAppName: ${{ vars.CONTAINER_APP_NAME }}
           containerAppEnvironment: ${{ vars.CONTAINER_APP_ENVIRONMENT }}
           ingress: external
-          targetPort: 8080
+          targetPort: 80
           environmentVariables: |
             ShipTheoryApiUrl=${{ vars.ShipTheoryApiUrl }}
     
